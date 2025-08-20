@@ -1,0 +1,289 @@
+@media (max-width: 767px) {
+    .projects-container::before,
+    .projects-container::after {
+        display: none !important;
+    }
+}
+@media (max-width: 767px) {
+    .project-card {
+        font-size: 0.75rem;
+    }
+    .project-card h3 {
+        font-size: 0.82rem;
+    }
+    .project-card p, .project-card span, .project-card a {
+        font-size: 0.68rem;
+    }
+}
+/* Mobile Menu Styles */
+#mobile-menu-overlay {
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+}
+
+#mobile-menu-sidebar {
+    box-shadow: -10px 0 25px rgba(0, 0, 0, 0.15);
+}
+
+.mobile-nav-link:hover {
+    transform: translateX(5px);
+}
+
+/* Smooth transitions */
+#mobile-menu-overlay,
+#mobile-menu-sidebar {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Responsive adjustments for mobile menu */
+@media (max-width: 480px) {
+    #mobile-menu-sidebar {
+        width: 100%;
+    }
+}
+
+/* Services section responsive */
+@media (max-width: 768px) {
+    #services .grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    #services .space-x-4 > * {
+        display: block;
+        margin-bottom: 1rem;
+    }
+    
+    #services .space-x-4 {
+        appearance: 0;
+    }
+}
+/* Neural Network Background Styles */
+#neuralNetwork {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	pointer-events: none;
+	overflow: hidden;
+}
+
+#neuralCanvas {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.neural-node {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: linear-gradient(135deg, #667eea 60%, #764ba2 100%);
+	opacity: 0.7;
+	box-shadow: 0 0 8px 2px #764ba244;
+	transition: background 0.3s;
+}
+
+.neural-node:hover {
+	background: #fff;
+	opacity: 1;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+}
+
+.gradient-bg {
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.card-hover {
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.skill-bar {
+	transition: width 1s ease-in-out;
+}
+
+.fade-in {
+	opacity: 0;
+	transform: translateY(20px);
+	transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+/* Updated Projects Carousel Styles - Replace the existing carousel styles */
+
+.projects-container {
+    position: relative;
+    overflow: hidden;
+    padding: 0 80px; /* Increased padding for arrows */
+}
+
+/* Add gradient overlays for side transparency effect */
+.projects-container::before,
+.projects-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.projects-container::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(249, 250, 251, 1) 0%, rgba(249, 250, 251, 0.8) 50%, rgba(249, 250, 251, 0) 100%);
+}
+
+.projects-container::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(249, 250, 251, 1) 0%, rgba(249, 250, 251, 0.8) 50%, rgba(249, 250, 251, 0) 100%);
+}
+
+.projects-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 2rem;
+    padding: 0 20px; /* Add padding to show partial cards */
+}
+
+.project-card {
+    flex: 0 0 calc(33.333% - 1.333rem);
+    min-width: 300px;
+    transition: all 0.3s ease;
+}
+
+/* Add subtle scaling effect for partial visibility */
+.project-card:first-child,
+.project-card:last-child {
+    opacity: 0.7;
+    transform: scale(0.95);
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    width: 55px; /* Slightly larger */
+    height: 55px;
+    border-radius: 50%;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #4f46e5;
+    transition: all 0.3s ease;
+    z-index: 15; /* Higher z-index to appear above gradient */
+}
+
+.nav-btn:hover {
+    background: #4f46e5;
+    color: white;
+    transform: translateY(-50%) scale(1.15);
+    box-shadow: 0 8px 25px rgba(79, 70, 229, 0.3);
+}
+
+.nav-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: translateY(-50%) scale(0.9);
+}
+
+.nav-btn:disabled:hover {
+    background: white;
+    color: #4f46e5;
+    transform: translateY(-50%) scale(0.9);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.nav-btn.prev {
+    left: 15px; /* Moved further left */
+}
+
+.nav-btn.next {
+    right: 15px; /* Moved further right */
+}
+
+/* Enhanced hover effect for visible projects */
+.project-card:not(:first-child):not(:last-child):hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+/* Projects Carousel Responsive adjustments */
+@media (max-width: 1024px) {
+    .project-card {
+        flex: 0 0 calc(50% - 1rem);
+        min-width: 280px;
+    }
+    .projects-container {
+        padding: 0 70px;
+    }
+    .projects-container::before,
+    .projects-container::after {
+        width: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        flex: 0 0 calc(100% - 1rem);
+        min-width: 250px;
+    }
+    .projects-container {
+        padding: 0 60px;
+    }
+    .projects-container::before,
+    .projects-container::after {
+        width: 60px;
+    }
+    .nav-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+    .nav-btn.prev {
+        left: 10px;
+    }
+    .nav-btn.next {
+        right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-container {
+        padding: 0 50px;
+    }
+    .projects-container::before,
+    .projects-container::after {
+        width: 40px;
+    }
+    .nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    .nav-btn.prev {
+        left: 5px;
+    }
+    .nav-btn.next {
+        right: 5px;
+    }
+}

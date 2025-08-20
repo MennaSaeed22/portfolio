@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menna Allah Saeed - AI Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Add Devicon CDN for extra logos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="photos/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="photos/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body class="bg-gray-50">
+    <!-- Updated Navigation Section with Mobile Menu -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50 shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-gray-800">Menna Allah Saeed</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-blue-600 transition-colors">Home</a>
+                    <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors">About</a>
+                    <a href="#education" class="text-gray-600 hover:text-blue-600 transition-colors">Education</a>
+                    <a href="#skills" class="text-gray-600 hover:text-blue-600 transition-colors">Skills</a>
+                    <a href="#services" class="text-gray-600 hover:text-blue-600 transition-colors">Services</a>
+                    <a href="#projects" class="text-gray-600 hover:text-blue-600 transition-colors">Projects</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
+                </div>
+                <button id="mobile-menu" class="md:hidden text-gray-600" aria-label="Open mobile menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Overlay -->
+            <div id="mobile-menu-overlay"
+                class="fixed inset-0 bg-black/50 z-40 opacity-0 invisible transition-all duration-300"></div>
+
+            <!-- Mobile Menu Sidebar -->
+            <div id="mobile-menu-sidebar"
+                class="fixed top-0 right-0 h-full w-80 bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300">
+                <div class="p-6 bg-white">
+                    <div class="flex justify-between items-center mb-8">
+                        <div class="text-xl font-bold text-gray-800">Menu</div>
+                        <button id="close-mobile-menu" class="text-gray-600 hover:text-gray-800"
+                            aria-label="Close mobile menu">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <nav class="space-y-4">
+                        <a href="#home"
+                            class="mobile-nav-link flex items-center space-x-3 p-3 rounded-lg hover:bg-blue-50 transition-colors">
+                            <i class="fa-solid fa-home text-blue-600"></i>
+                            <span class="text-gray-800 font-medium">Home</span>
+                        </a>
+                        <a href="#about"
+                            class="mobile-nav-link flex items-center space-x-3 p-3 rounded-lg hover:bg-blue-50 transition-colors">
+                            <i class="fa-solid fa-user text-blue-600"></i>
+                            <span class="text-gray-800 font-medium">About</span>
+                        </a>
+                        <a href="#education"
+                            class="mobile-nav-link flex items-center space-x-3 p-3 rounded-lg hover:bg-blue-50 transition-colors">
+                            <i class="fa-solid fa-graduation-cap text-blue-600"></i>
+                            <span class="text-gray-800 font-medium">Education</span>
+                        </a>
+                        <a href="#skills"
+                            class="mobile-nav-link flex items-center space-x-3 p-3 rounded-lg hover:bg-blue-50 transition-colors">
+                            <i class="fa-solid fa-cogs text-blue-600"></i>
+                            <span class="text-gray-800 font-medium">Skills</span>
+                        </a>
+                        <a href="#services"
+                            class="mobile-nav-link flex items-center space-x-3 p-3 rounded-lg hover:bg-blue-50 transition-colors">
+                            <i class="fa-solid fa-briefcase text-blue-600"></i>
+                            <span class="text-gray-800 font-medium">Services</span>
+                        </a>
+                        <a href="#projects"
+                            class="mobile-nav-link flex items-center space-x-3 p-3 rounded-lg hover:bg-blue-50 transition-colors">
+                            <i class="fa-solid fa-folder text-blue-600"></i>
+                            <span class="text-gray-800 font-medium">Projects</span>
+                        </a>
+                        <a href="#contact"
+                            class="mobile-nav-link flex items-center space-x-3 p-3 rounded-lg hover:bg-blue-50 transition-colors">
+                            <i class="fa-solid fa-envelope text-blue-600"></i>
+                            <span class="text-gray-800 font-medium">Contact</span>
+                        </a>
+                    </nav>
+
+                    <!-- Social Links in Mobile Menu -->
+                    <div class="mt-8 pt-6 border-t border-gray-200">
+                        <div class="text-sm text-gray-600 mb-4">Connect with me</div>
+                        <div class="flex space-x-4">
+                            <a href="https://www.linkedin.com/in/mennasaeed22" target="_blank"
+                                class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-200 transition-colors"
+                                title="LinkedIn Profile">
+                                <i class="fa-brands fa-linkedin text-blue-600"></i>
+                            </a>
+                            <a href="https://github.com/mennasaeed22" target="_blank"
+                                class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors"
+                                title="GitHub Profile">
+                                <i class="fa-brands fa-github text-gray-600"></i>
+                            </a>
+                            <a href="mailto:mennaallahsaeed22@gmail.com"
+                                class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center hover:bg-red-200 transition-colors"
+                                title="Send Email">
+                                <i class="fa-solid fa-envelope text-red-600"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cover Section -->
+    <section id="home" class="gradient-bg min-h-screen flex items-center justify-center text-white pt-24 sm:pt-0">
+        <div id="neuralNetwork">
+            <canvas id="neuralCanvas"></canvas>
+        </div>
+        <div class="text-center px-6 fade-in neural-hero">
+            <div
+                class="w-32 h-32 mx-auto mb-8 bg-white/20 rounded-full flex items-center justify-center overflow-hidden shadow-lg">
+                <img src="photos/photo_new.jpg" alt="Menna Allah Saeed"
+                    class="w-full h-full object-cover rounded-full" />
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">Menna Allah Saeed</h1>
+            <p class="text-xl md:text-2xl mb-8 text-white/90">AI & Machine Learning Engineer</p>
+            <p class="text-lg mb-12 max-w-2xl mx-auto text-white/80">
+                Building intelligent systems that solve real-world problems through cutting-edge AI and machine learning
+                technologies.
+            </p>
+            <div class="space-x-4">
+                <div class="flex flex-col sm:flex-row gap-4 sm:space-x-4 w-full items-center justify-center">
+                    <a href="#projects"
+                        class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors w-full sm:w-auto text-center">
+                        View My Work
+                    </a>
+                    <a href="#contact"
+                        class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors w-full sm:w-auto text-center">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">About Me</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <div
+                        class="w-64 h-64 mx-auto bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-8xl text-white">
+                        <i class="fa-solid fa-ranking-star"></i>
+                    </div>
+                </div>
+                <div class="fade-in">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">Passionate AI Engineer</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed text-justify">
+                        I am a graduate from the Faculty of Computers and Data Science at Alexandria University, with a
+                        strong background in data science and a deep passion for Artificial Intelligence. My journey has
+                        been shaped by curiosity and a drive to explore how intelligent systems can transform ideas into
+                        meaningful solutions.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed text-justify">
+                        I enjoy working with deep learning, NLP, and attention-based models, and I'm particularly
+                        interested in Generative AI. What excites me most is turning complex concepts into simple,
+                        impactful technologies that improve everyday experiences.
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Education & Training</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    My academic foundation and continuous learning journey in AI, machine learning, and emerging
+                    technologies.
+                </p>
+            </div>
+
+            <!-- University Education -->
+            <div class="mb-20 fade-in">
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+                        <div class="bg-gradient-to-r from-blue-600 to-purple-600 p-8 text-white">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h3 class="text-3xl font-bold mb-2">Faculty of Computers and Data Science</h3>
+                                    <p class="text-xl text-blue-100">Alexandria University</p>
+                                    <p class="text-blue-200 mt-2">Class of 2025 • Bachelor's Degree in Data Science</p>
+                                </div>
+                                <div class="text-6xl opacity-80">🎓</div>
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <div class="grid md:grid-cols-3 gap-6">
+                                <div class="text-center">
+                                    <div
+                                        class="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center text-2xl">
+                                        <i class="fa-solid fa-brain text-blue-600"></i>
+                                    </div>
+                                    <h4 class="font-semibold text-gray-800 mb-2">AI Focus</h4>
+                                    <p class="text-sm text-gray-600">Specialized in Artificial Intelligence and Machine
+                                        Learning algorithms</p>
+                                </div>
+                                <div class="text-center">
+                                    <div
+                                        class="w-16 h-16 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center text-2xl">
+                                        <i class="fa-solid fa-chart-bar text-purple-600"></i>
+                                    </div>
+                                    <h4 class="font-semibold text-gray-800 mb-2">Data Science</h4>
+                                    <p class="text-sm text-gray-600">Advanced statistical analysis and data-driven
+                                        applications</p>
+                                </div>
+                                <div class="text-center">
+                                    <div
+                                        class="w-16 h-16 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center text-2xl">
+                                        <i class="fa-solid fa-laptop-code text-green-600"></i>
+                                    </div>
+                                    <h4 class="font-semibold text-gray-800 mb-2">Computer Science</h4>
+                                    <p class="text-sm text-gray-600">Strong foundation in programming and software
+                                        engineering</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Training & Internships -->
+            <div class="mb-16 fade-in">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-8 text-center">Professional Training & Internships
+                </h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Current Training -->
+                    <div class="bg-white rounded-2xl shadow-lg p-6 border-l-4 border-blue-500">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-xl">
+                                    <i class="fa-solid fa-robot text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Robotics Intern</h4>
+                                    <p class="text-sm text-blue-600">EME Borg • Aug 2025 - Present</p>
+                                </div>
+                            </div>
+                            <span
+                                class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full font-medium">Current</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">Arduino</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">ESP32</span>
+                            <span
+                                class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">Microcontrollers</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-lg p-6 border-l-4 border-purple-500">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="flex items-center space-x-3">
+                                <div
+                                    class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center text-xl">
+                                    <i class="fa-solid fa-laptop-code text-purple-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Generative AI Trainee</h4>
+                                    <p class="text-sm text-purple-600">DEPI • Jun 2025 - Present</p>
+                                </div>
+                            </div>
+                            <span
+                                class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full font-medium">Current</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">Generative AI</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">LLMs</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">AI
+                                Applications</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-lg p-6 border-l-4 border-green-500">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center text-xl"><i
+                                    class="fa-solid fa-globe text-green-600"></i></div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">IoT Intern</h4>
+                                <p class="text-sm text-green-600">ITI • Jul 2024</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">IoT</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">Value Chain</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">AEP</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-lg p-6 border-l-4 border-red-500">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center text-xl"><i
+                                    class="fa-solid fa-brain text-red-600"></i></div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">ML Intern</h4>
+                                <p class="text-sm text-red-600">Mentorness • May - Jun 2024</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">Python</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">Time Series</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">Statistical
+                                Modeling</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Certifications -->
+            <div class="fade-in">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-8 text-center">Key Certifications</h3>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div
+                        class="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl text-center group hover:shadow-xl transition-all duration-300">
+                        <div
+                            class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center text-2xl text-white">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Anomaly Detection in Python</h4>
+                        <p class="text-sm text-gray-600 mb-3">DataCamp • Apr 2025</p>
+                        <a href="https://www.datacamp.com/completed/statement-of-accomplishment/course/0126e26b74cb0a7e379e49bb7398bcc953cee331"
+                            target="_blank"
+                            class="mt-3 inline-block px-4 py-2 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 transition-colors text-sm font-medium">View
+                            Certificate</a>
+                    </div>
+
+                    <div
+                        class="bg-gradient-to-br from-green-50 to-teal-50 p-6 rounded-2xl text-center group hover:shadow-xl transition-all duration-300">
+                        <div
+                            class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-500 to-teal-600 rounded-xl flex items-center justify-center text-2xl text-white">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Machine Learning</h4>
+                        <p class="text-sm text-gray-600 mb-3">DeepLearning.AI • Dec 2024</p>
+                        <a href="https://www.coursera.org/account/accomplishments/verify/ZDSX7NMG1ASR?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course"
+                            target="_blank"
+                            class="mt-3 inline-block px-4 py-2 bg-green-500 text-white rounded-lg shadow hover:bg-green-600 transition-colors text-sm font-medium">View
+                            Certificate</a>
+                    </div>
+
+                    <div
+                        class="bg-gradient-to-br from-orange-50 to-red-50 p-6 rounded-2xl text-center group hover:shadow-xl transition-all duration-300">
+                        <div
+                            class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center text-2xl text-white">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Data Mining Pipeline</h4>
+                        <p class="text-sm text-gray-600 mb-3">University of Colorado • Jul 2023</p>
+                        <a href="https://www.coursera.org/account/accomplishments/verify/GDU7S4UX2KYR?utm_source=ln&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course"
+                            target="_blank"
+                            class="mt-3 inline-block px-4 py-2 bg-orange-500 text-white rounded-lg shadow hover:bg-orange-600 transition-colors text-sm font-medium">View
+                            Certificate</a>
+                    </div>
+
+                    <div
+                        class="bg-gradient-to-br from-cyan-50 to-blue-50 p-6 rounded-2xl text-center group hover:shadow-xl transition-all duration-300">
+                        <div
+                            class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center text-2xl text-white">
+                            <i class="fa-brands fa-github"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Version Control</h4>
+                        <p class="text-sm text-gray-600 mb-3">Meta • Aug 2024</p>
+                        <a href="https://www.coursera.org/account/accomplishments/verify/1CC7ZSIG3RQ6?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course"
+                            target="_blank"
+                            class="mt-3 inline-block px-4 py-2 bg-cyan-500 text-white rounded-lg shadow hover:bg-cyan-600 transition-colors text-sm font-medium">View
+                            Certificate</a>
+                    </div>
+
+                    <div
+                        class="bg-gradient-to-br from-yellow-50 to-amber-50 p-6 rounded-2xl text-center group hover:shadow-xl transition-all duration-300">
+                        <div
+                            class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-xl flex items-center justify-center text-2xl text-white">
+                            <i class="fa-solid fa-cogs"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Machine Learning Process</h4>
+                        <p class="text-sm text-gray-600 mb-3">365 Data Science • Nov 2024</p>
+                        <a href="https://learn.365datascience.com/certificates/CC-CF0C78DA18/" target="_blank"
+                            class="mt-3 inline-block px-4 py-2 bg-yellow-500 text-white rounded-lg shadow hover:bg-yellow-600 transition-colors text-sm font-medium">View
+                            Certificate</a>
+                    </div>
+
+                    <div
+                        class="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-2xl text-center group hover:shadow-xl transition-all duration-300">
+                        <div
+                            class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center text-2xl text-white">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">ML with Ridge and Lasso Regression</h4>
+                        <p class="text-sm text-gray-600 mb-3">365 Data Science • Nov 2024</p>
+                        <a href="https://learn.365datascience.com/certificates/CC-C83D936231/" target="_blank"
+                            class="mt-3 inline-block px-4 py-2 bg-purple-500 text-white rounded-lg shadow hover:bg-purple-600 transition-colors text-sm font-medium">View
+                            Certificate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Skills</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+
+            <!-- Programming Languages -->
+            <div class="mb-16 fade-in">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-8 text-center">Programming Languages</h3>
+                <div class="flex flex-wrap justify-center gap-8">
+
+                    <!-- Python -->
+                    <div class="text-center group">
+                        <div
+                            class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-3xl text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            <i class="fa-brands fa-python"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800">Python</h4>
+                    </div>
+
+                    <!-- C++ -->
+                    <div class="text-center group">
+                        <div
+                            class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-3xl text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            <i class="devicon-cplusplus-plain"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800">C++</h4>
+                    </div>
+
+                    <!-- Java -->
+                    <div class="text-center group">
+                        <div
+                            class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center text-3xl text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            <i class="devicon-java-plain"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800">Java</h4>
+                    </div>
+
+                    <!-- R -->
+                    <div class="text-center group">
+                        <div
+                            class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center text-3xl text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            <i class="devicon-r-plain"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800">R</h4>
+                    </div>
+
+                    <div class="text-center group">
+                        <div
+                            class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center text-3xl text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            <i class="devicon-dart-plain"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800">Dart</h4>
+                    </div>
+                </div>
+            </div>
+            <!-- Frameworks & Libraries -->
+            <div class="mb-16 fade-in">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-8 text-center">Frameworks & Libraries</h3>
+                <div class="flex flex-wrap justify-center gap-8">
+
+                    <!-- TensorFlow -->
+                    <div class="text-center group">
+                        <div
+                            class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center text-3xl text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            <i class="devicon-tensorflow-original"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800">TensorFlow</h4>
+                    </div>
+
+                    <!-- Scikit-learn -->
+                    <div class="text-center group">
+                        <div
+                            class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-orange-400 to-yellow-500 rounded-2xl flex items-center justify-center text-3xl text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg"
+                                alt="Scikit-learn" class="w-12 h-12">
+                        </div>
+                        <h4 class="font-semibold text-gray-800">Scikit-learn</h4>
+                    </div>
+
+                    <!-- Flutter -->
+                    <div class="text-center group">
+                        <div
+                            class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-2xl flex items-center justify-center text-3xl text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            <i class="devicon-flutter-plain"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800">Flutter</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Specializations -->
+            <div class="mb-16 fade-in">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-8 text-center">AI Specializations</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-5xl mx-auto">
+                    <div
+                        class="bg-gradient-to-br from-orange-50 to-red-50 p-6 rounded-2xl text-center group hover:shadow-xl transition-all duration-300">
+                        <div
+                            class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center text-2xl text-white group-hover:scale-110 transition-transform duration-300">
+                            <i class="fa-solid fa-gears"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Machine Learning</h4>
+                        <p class="text-sm text-gray-600 w-48 break-words text-center mx-auto">Model training,
+                            evaluation, deployment</p>
+                    </div>
+                    <div
+                        class="bg-gradient-to-br from-purple-50 to-indigo-50 p-6 rounded-2xl text-center group hover:shadow-xl transition-all duration-300">
+                        <div
+                            class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center text-2xl text-white group-hover:scale-110 transition-transform duration-300">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Computer Vision</h4>
+                        <p class="text-sm text-gray-600 w-48 break-words text-center mx-auto">Object detection,
+                            image classification
+                        </p>
+                    </div>
+                    <div
+                        class="bg-gradient-to-br from-green-50 to-teal-50 p-6 rounded-2xl text-center group hover:shadow-xl transition-all duration-300">
+                        <div
+                            class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-500 to-teal-600 rounded-xl flex items-center justify-center text-2xl text-white group-hover:scale-110 transition-transform duration-300">
+                            <i class="fa-solid fa-comment-dots"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">NLP</h4>
+                        <p class="text-sm text-gray-600 w-48 break-words text-center mx-auto">Sentiment analysis,
+                            text generation</p>
+                    </div>
+                    <div
+                        class="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-2xl text-center group hover:shadow-xl transition-all duration-300">
+                        <div
+                            class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center text-2xl text-white group-hover:scale-110 transition-transform duration-300">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Deep Learning</h4>
+                        <p class="text-sm text-gray-600 w-48 break-words text-center mx-auto">Neural networks,
+                            transformers</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools & Technologies -->
+            <div class="fade-in">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-8 text-center">Tools & Technologies</h3>
+                <div class="flex flex-wrap justify-center gap-4 text-3xl">
+                    <div class="relative group flex items-center justify-center h-full">
+                        <i class="devicon-arduino-plain px-6 py-3 bg-gray-100 rounded-full text-blue-600 transition-transform duration-300 hover:scale-110 hover:shadow-lg"
+                            aria-label="Arduino"></i>
+                        <span
+                            class="opacity-0 group-hover:opacity-100 pointer-events-none absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs rounded py-1 px-2 whitespace-nowrap transition-opacity duration-200 z-10">Arduino</span>
+                    </div>
+                    <div class="relative group flex items-center justify-center h-full">
+                        <i class="fa-brands fa-git-alt px-6 py-3 bg-gray-100 rounded-full text-red-600 transition-transform duration-300 hover:scale-110 hover:shadow-lg align-middle"
+                            style="line-height:1;" aria-label="Git"></i>
+                        <span
+                            class="opacity-0 group-hover:opacity-100 pointer-events-none absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs rounded py-1 px-2 whitespace-nowrap transition-opacity duration-200 z-10">Git</span>
+                    </div>
+                    <div class="relative group flex items-center justify-center h-full">
+                        <i class="devicon-mysql-plain px-6 py-3 bg-gray-100 rounded-full text-blue-600 transition-transform duration-300 hover:scale-110 hover:shadow-lg"
+                            aria-label="MySQL"></i>
+                        <span
+                            class="opacity-0 group-hover:opacity-100 pointer-events-none absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs rounded py-1 px-2 whitespace-nowrap transition-opacity duration-200 z-10">MySQL</span>
+                    </div>
+                    <div class="relative group flex items-center justify-center h-full">
+                        <i class="devicon-microsoftsqlserver-plain px-6 py-3 bg-gray-100 rounded-full text-blue-600 transition-transform duration-300 hover:scale-110 hover:shadow-lg"
+                            aria-label="SQL Server"></i>
+                        <span
+                            class="opacity-0 group-hover:opacity-100 pointer-events-none absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs rounded py-1 px-2 whitespace-nowrap transition-opacity duration-200 z-10">SQL
+                            Server</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soft Skills -->
+            <div class="mt-16 fade-in">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-8 text-center">Soft Skills</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-2 justify-center">
+                    <div
+                        class="text-center rounded-xl shadow-sm transition-transform duration-200 hover:scale-105 hover:shadow-md">
+                        <div
+                            class="w-16 h-16 mx-auto mb-4 bg-blue-400 rounded-full flex items-center justify-center text-2xl text-white">
+                            <i class="fa-solid fa-comments"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800">Communication</h4>
+                    </div>
+                    <div
+                        class="text-center rounded-xl shadow-sm transition-transform duration-200 hover:scale-105 hover:shadow-md p-2">
+                        <div
+                            class="w-16 h-16 mx-auto mb-4 bg-green-400 rounded-full flex items-center justify-center text-2xl text-white">
+                            <i class="fa-solid fa-people-group"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800">Teamwork</h4>
+                    </div>
+                    <div
+                        class="text-center rounded-xl shadow-sm transition-transform duration-200 hover:scale-105 hover:shadow-md">
+                        <div
+                            class="w-16 h-16 mx-auto mb-4 bg-yellow-400 rounded-full flex items-center justify-center text-2xl text-white">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800">Problem Solving</h4>
+                    </div>
+                    <div
+                        class="text-center rounded-xl shadow-sm transition-transform duration-200 hover:scale-105 hover:shadow-md">
+                        <div
+                            class="w-16 h-16 mx-auto mb-4 bg-pink-400 rounded-full flex items-center justify-center text-2xl text-white">
+                            <i class="fa-solid fa-arrows-spin"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800">Adaptability</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Services Offered</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    I provide comprehensive AI and machine learning solutions to help businesses leverage the power of
+                    artificial intelligence. From custom model development to data analysis and automation, I deliver
+                    cutting-edge solutions tailored to your needs.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Machine Learning Development -->
+                <div
+                    class="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl text-center group hover:shadow-xl transition-all duration-300 card-hover">
+                    <div
+                        class="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center text-2xl text-white group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Machine Learning Development</h3>
+                    <p class="text-gray-600 mb-4">Custom ML model development, training, and optimization for
+                        classification, regression, clustering, and predictive analytics solutions.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li>• Supervised & Unsupervised Learning</li>
+                        <li>• Model Training & Optimization</li>
+                        <li>• Performance Evaluation</li>
+                    </ul>
+                </div>
+
+                <!-- Deep Learning & Neural Networks -->
+                <div
+                    class="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl text-center group hover:shadow-xl transition-all duration-300 card-hover">
+                    <div
+                        class="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center text-2xl text-white group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Deep Learning & Neural Networks</h3>
+                    <p class="text-gray-600 mb-4">Advanced neural network architectures including CNNs, RNNs, LSTMs, and
+                        Transformer models for complex AI applications.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li>• Convolutional Neural Networks</li>
+                        <li>• Recurrent Neural Networks</li>
+                        <li>• Transformer Architecture</li>
+                    </ul>
+                </div>
+
+                <!-- Data Analysis & Visualization -->
+                <div
+                    class="bg-gradient-to-br from-yellow-50 to-amber-50 p-8 rounded-2xl text-center group hover:shadow-xl transition-all duration-300 card-hover">
+                    <div
+                        class="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-xl flex items-center justify-center text-2xl text-white group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Analysis & Visualization</h3>
+                    <p class="text-gray-600 mb-4">Comprehensive data analysis, statistical modeling, interactive
+                        dashboards, and insights extraction from complex datasets.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li>• Statistical Analysis</li>
+                        <li>• Data Mining</li>
+                        <li>• Predictive Analytics</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center mt-12 fade-in">
+                <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold mb-4">Ready to Transform Your Business with AI?</h3>
+                    <p class="text-blue-100 mb-6 max-w-2xl mx-auto">
+                        Let's discuss how artificial intelligence and machine learning can solve your unique challenges
+                        and drive innovation in your industry.
+                    </p>
+                    <div class="space-x-4">
+                        <a href="#contact"
+                            class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">
+                            Get Started
+                        </a>
+                        <a href="#projects"
+                            class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-block">
+                            View My Work
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section - Replace your existing projects section with this -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="w-full max-w-full mx-auto px-2 md:px-8 lg:px-16">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Featured Projects</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Here are some of my recent AI projects that showcase my expertise in machine learning and artificial
+                    intelligence.
+                </p>
+            </div>
+
+            <div class="projects-container fade-in">
+                <button class="nav-btn prev" id="prevBtn" onclick="slideProjects('prev')" title="Previous Project">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="nav-btn next" id="nextBtn" onclick="slideProjects('next')" title="Next Project">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+                <div class="projects-track mb-8" id="projectsTrack">
+                    <!-- Project 1 -->
+                    <div
+                        class="project-card bg-white rounded-xl shadow-lg overflow-hidden card-hover w-full sm:w-80 mx-auto">
+                        <div class="h-48 flex items-center justify-center bg-white">
+                            <img src="photos/savvy.png" alt="Neural Style Transfer"
+                                class="w-full h-full object-contain" />
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3">Savvy</h3>
+                            <p class="text-gray-600 mb-4">
+                                Smart financial assistant that leverages AI and machine learning to help users save
+                                money more effectively.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Flutter</span>
+                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">FastAPI</span>
+                                <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Time
+                                    series</span>
+                            </div>
+                            <a href="https://github.com/MennaSaeed22/Savvy" target="_blank" rel="noopener noreferrer"
+                                class="w-full block bg-blue-600 text-white py-2 rounded-lg text-center font-semibold hover:bg-blue-700 transition-colors">
+                                View Project
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div
+                        class="project-card bg-white rounded-xl shadow-lg overflow-hidden card-hover w-full sm:w-80 mx-auto">
+                        <div class="h-48 flex items-center justify-center bg-white">
+                            <img src="photos/news_project.png" alt="Sentiment Analysis"
+                                class="w-full h-full object-contain" />
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3">News Classification</h3>
+                            <p class="text-gray-600 mb-4">
+                                This project seeks to analyze a dataset formatted in XML, utilizing NLP techniques to
+                                categorize the data.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Multi-label
+                                    classification</span>
+                                <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">NLP</span>
+                            </div>
+                            <a href="https://github.com/MennaSaeed22/ReutersNewsClassification" target="_blank"
+                                rel="noopener noreferrer"
+                                class="w-full block bg-blue-600 text-white py-2 rounded-lg text-center font-semibold hover:bg-blue-700 transition-colors">
+                                View Project
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div
+                        class="project-card bg-white rounded-xl shadow-lg overflow-hidden card-hover w-full sm:w-80 mx-auto">
+                        <div class="h-48 flex items-center justify-center bg-white">
+                            <img src="photos/TS.png" alt="Market Price Prediction"
+                                class="w-full h-full object-contain" />
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3">Market Price Prediction</h3>
+                            <p class="text-gray-600 mb-4">
+                                This project focuses on predicting market prices using historical data and machine
+                                learning techniques.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Multivariate
+                                    LSTM</span>
+                                <span class="px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full">Time series</span>
+                            </div>
+                            <a href="https://github.com/MennaSaeed22/MarketPricePrediction" target="_blank"
+                                rel="noopener noreferrer"
+                                class="w-full block bg-blue-600 text-white py-2 rounded-lg text-center font-semibold hover:bg-blue-700 transition-colors">
+                                View Project
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div
+                        class="project-card bg-white rounded-xl shadow-lg overflow-hidden card-hover w-full sm:w-80 mx-auto">
+                        <div class="h-48 flex items-center justify-center bg-white">
+                            <img src="photos/bank.png" alt="Predictive Analytics Dashboard"
+                                class="w-full h-full object-contain" />
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3">Bank Marketing</h3>
+                            <p class="text-gray-600 mb-4">
+                                Classification model aims to predict if the client will subscribe (yes/no) to the term
+                                deposit.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">SVM</span>
+                                <span
+                                    class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Classification</span>
+                            </div>
+                            <a href="https://github.com/MennaSaeed22/BankMarketing" target="_blank"
+                                rel="noopener noreferrer"
+                                class="w-full block bg-blue-600 text-white py-2 rounded-lg text-center font-semibold hover:bg-blue-700 transition-colors">
+                                View Project
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div
+                        class="project-card bg-white rounded-xl shadow-lg overflow-hidden card-hover w-full sm:w-80 mx-auto">
+                        <div class="h-48 flex items-center justify-center bg-white">
+                            <img src="photos/arduino.png" alt="Chatbot Assistant"
+                                class="w-full h-full object-contain" />
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3">Wireless Accelerometer Robot</h3>
+                            <p class="text-gray-600 mb-4">
+                                Control of a car using an MPU6050 accelerometer and the nRF24L01 wireless module for
+                                communication.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Arduino</span>
+                            </div>
+                            <a href="https://github.com/MennaSaeed22/WirelessAccelerometerRobot" target="_blank"
+                                rel="noopener noreferrer"
+                                class="w-full block bg-blue-600 text-white py-2 rounded-lg text-center font-semibold hover:bg-blue-700 transition-colors">
+                                View Project
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div
+                        class="project-card bg-white rounded-xl shadow-lg overflow-hidden card-hover w-full sm:w-80 mx-auto">
+                        <div class="h-48 flex items-center justify-center bg-white">
+                            <img src="photos/ESP.png" alt="Anomaly Detection Engine"
+                                class="w-full h-full object-contain" />
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3">Firefighter Robot</h3>
+                            <p class="text-gray-600 mb-4">
+                                The robot is capable of detecting fire using flame sensors, and can navigate to the
+                                source of the fire.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">ESP32</span>
+                            </div>
+                            <a href="https://github.com/MennaSaeed22/FirefighterRobot" target="_blank"
+                                rel="noopener noreferrer"
+                                class="w-full block bg-blue-600 text-white py-2 rounded-lg text-center font-semibold hover:bg-blue-700 transition-colors">
+                                View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 gradient-bg text-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold mb-4">Let's Work Together</h2>
+                <div class="w-20 h-1 bg-white mx-auto mb-6"></div>
+                <p class="text-xl text-white/90">
+                    Ready to bring your AI ideas to life? Let's discuss your next project.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="fade-in">
+                    <h3 class="text-2xl font-semibold mb-6">Get In Touch</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-xl">
+                                <a href="mailto:mennaallahsaeed22@gmail.com" target="_blank" rel="noopener noreferrer"
+                                    class="text-inherit" title="Send Email"><i class="fa-solid fa-envelope"></i></a>
+                            </div>
+                            <div>
+                                <div class="font-medium">Email</div>
+                                <div class="text-white/80">mennaallahsaeed22@gmail.com</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-xl">
+                                <a href="https://www.linkedin.com/in/mennasaeed22" target="_blank"
+                                    rel="noopener noreferrer" class="text-inherit" title="LinkedIn Profile"><i
+                                        class="fa-brands fa-linkedin"></i></a>
+                            </div>
+                            <div>
+                                <div class="font-medium">LinkedIn</div>
+                                <div class="text-white/80">linkedin.com/in/mennasaeed22</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-xl">
+                                <a href="https://github.com/mennasaeed22" target="_blank" rel="noopener noreferrer"
+                                    class="text-inherit" title="GitHub Profile"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                            <div>
+                                <div class="font-medium">GitHub</div>
+                                <div class="text-white/80">github.com/mennasaeed22</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fade-in">
+                    <form class="space-y-6" action="https://formsubmit.co/mennaallahsaeed22@gmail.com" method="POST">
+                        <!-- Redirect to Thank You page -->
+                        <input type="hidden" name="_next" value="https://mennasaeed22.github.io/portfolio/thank.html">
+                        <input type="hidden" name="_captcha" value="false">
+
+                        <div>
+                            <input type="text" name="name" placeholder="Your Name" required
+                                class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:border-white/40">
+                        </div>
+                        <div>
+                            <input type="email" name="email" placeholder="Your Email" required
+                                class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:border-white/40">
+                        </div>
+                        <div>
+                            <textarea name="message" placeholder="Your Message" rows="4" required
+                                class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:border-white/40 resize-none"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-white text-blue-600 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p class="text-gray-400">
+                © 2025 Menna Allah Saeed. All rights reserved. Built with passion for AI and innovation.
+            </p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

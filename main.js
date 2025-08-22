@@ -167,6 +167,10 @@ function getVisibleProjects() {
 function getMaxSlide() {
     const totalProjects = document.querySelectorAll('.project-card').length;
     const visibleProjects = getVisibleProjects();
+    // On mobile, only 1 card is visible, but we need to ensure last card is fully visible
+    if (window.innerWidth < 768) {
+        return Math.max(0, totalProjects - 1);
+    }
     return Math.max(0, totalProjects - visibleProjects);
 }
 
@@ -197,14 +201,31 @@ function updateCardEffects() {
 
 function updateSlidePosition() {
     const visibleProjects = getVisibleProjects();
-    const slideWidth = 100 / visibleProjects;
-    const translateX = -(currentSlide * slideWidth);
-    projectsTrack.style.transform = `translateX(${translateX}%)`;
-    
+    // Mobile: use pixel-based translation for perfect alignment
+    if (window.innerWidth < 768) {
+        const card = projectsTrack.querySelector('.project-card');
+        if (card) {
+            const cardStyle = window.getComputedStyle(card);
+            const cardWidth = card.offsetWidth;
+            const gap = parseInt(cardStyle.marginRight) || 32; // default gap-8 = 2rem = 32px
+            const totalWidth = cardWidth + gap;
+            const totalProjects = document.querySelectorAll('.project-card').length;
+            const containerWidth = projectsTrack.parentElement.offsetWidth;
+            let translateX = currentSlide * totalWidth;
+            // Ensure last card is fully visible
+            const maxTranslate = (totalWidth * totalProjects) - containerWidth;
+            if (translateX > maxTranslate) translateX = maxTranslate;
+            projectsTrack.style.transform = `translateX(-${translateX}px)`;
+        }
+    } else {
+        // Desktop/tablet: use percent-based for multi-card view
+        const slideWidth = 100 / visibleProjects;
+        const translateX = -(currentSlide * slideWidth);
+        projectsTrack.style.transform = `translateX(${translateX}%)`;
+    }
     // Update button states
     prevBtn.disabled = currentSlide === 0;
     nextBtn.disabled = currentSlide >= getMaxSlide();
-    
     // Update card effects
     updateCardEffects();
 }

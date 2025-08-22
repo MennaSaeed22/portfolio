@@ -129,11 +129,7 @@
             <canvas id="neuralCanvas"></canvas>
         </div>
         <div class="text-center px-6 fade-in neural-hero">
-            <div
-                class="w-32 h-32 mx-auto mb-8 bg-white/20 rounded-full flex items-center justify-center overflow-hidden shadow-lg">
-                <img src="photos/photo_new.jpg" alt="Menna Allah Saeed"
-                    class="w-full h-full object-cover rounded-full" />
-            </div>
+            <!-- Removed photo from cover section -->
             <h1 class="text-5xl md:text-7xl font-bold mb-6">Menna Allah Saeed</h1>
             <p class="text-xl md:text-2xl mb-8 text-white/90">AI & Machine Learning Engineer</p>
             <p class="text-lg mb-12 max-w-2xl mx-auto text-white/80">
@@ -164,9 +160,8 @@
             </div>
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="fade-in">
-                    <div
-                        class="w-64 h-64 mx-auto bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-8xl text-white">
-                        <i class="fa-solid fa-ranking-star"></i>
+                    <div class="w-64 h-64 mx-auto rounded-full overflow-hidden shadow-lg border-4 border-blue-400 bg-white flex items-center justify-center">
+                        <img src="photos/photo_new.jpg" alt="Menna Allah Saeed" class="w-full h-full object-cover rounded-full" />
                     </div>
                 </div>
                 <div class="fade-in">
@@ -205,43 +200,39 @@
                 <div class="max-w-4xl mx-auto">
                     <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
                         <div class="bg-gradient-to-r from-blue-600 to-purple-600 p-8 text-white">
-                            <div class="flex items-center justify-between">
-                                <div>
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                                <div class="text-center md:text-left">
                                     <h3 class="text-3xl font-bold mb-2">Faculty of Computers and Data Science</h3>
                                     <p class="text-xl text-blue-100">Alexandria University</p>
                                     <p class="text-blue-200 mt-2">Class of 2025 • Bachelor's Degree in Data Science</p>
                                 </div>
-                                <div class="text-6xl opacity-80">🎓</div>
+                                <img src="photos/logo_college.png" alt="College Logo"
+                                    class="w-32 h-32 md:w-44 md:h-44 object-contain rounded-full border-4 border-blue-400 shadow-lg bg-white p-2 mx-auto md:mx-0"
+                                    style="max-width:180px;max-height:180px;">
                             </div>
                         </div>
                         <div class="p-8">
                             <div class="grid md:grid-cols-3 gap-6">
                                 <div class="text-center">
-                                    <div
-                                        class="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center text-2xl">
+                                    <div class="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center text-2xl">
                                         <i class="fa-solid fa-brain text-blue-600"></i>
                                     </div>
                                     <h4 class="font-semibold text-gray-800 mb-2">AI Focus</h4>
-                                    <p class="text-sm text-gray-600">Specialized in Artificial Intelligence and Machine
-                                        Learning algorithms</p>
+                                    <p class="text-sm text-gray-600">Specialized in Artificial Intelligence and Machine Learning algorithms</p>
                                 </div>
                                 <div class="text-center">
-                                    <div
-                                        class="w-16 h-16 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center text-2xl">
+                                    <div class="w-16 h-16 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center text-2xl">
                                         <i class="fa-solid fa-chart-bar text-purple-600"></i>
                                     </div>
                                     <h4 class="font-semibold text-gray-800 mb-2">Data Science</h4>
-                                    <p class="text-sm text-gray-600">Advanced statistical analysis and data-driven
-                                        applications</p>
+                                    <p class="text-sm text-gray-600">Advanced statistical analysis and data-driven applications</p>
                                 </div>
                                 <div class="text-center">
-                                    <div
-                                        class="w-16 h-16 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center text-2xl">
+                                    <div class="w-16 h-16 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center text-2xl">
                                         <i class="fa-solid fa-laptop-code text-green-600"></i>
                                     </div>
                                     <h4 class="font-semibold text-gray-800 mb-2">Computer Science</h4>
-                                    <p class="text-sm text-gray-600">Strong foundation in programming and software
-                                        engineering</p>
+                                    <p class="text-sm text-gray-600">Strong foundation in programming and software engineering</p>
                                 </div>
                             </div>
                         </div>
@@ -251,8 +242,7 @@
 
             <!-- Professional Training & Internships -->
             <div class="mb-16 fade-in">
-                <h3 class="text-2xl font-semibold text-gray-800 mb-8 text-center">Professional Training & Internships
-                </h3>
+                <h3 class="text-2xl font-semibold text-gray-800 mb-8 text-center">Professional Training & Internships</h3>
                 <div class="grid md:grid-cols-2 gap-8">
                     <!-- Current Training -->
                     <div class="bg-white rounded-2xl shadow-lg p-6 border-l-4 border-blue-500">
@@ -266,14 +256,12 @@
                                     <p class="text-sm text-blue-600">EME Borg • Aug 2025 - Present</p>
                                 </div>
                             </div>
-                            <span
-                                class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full font-medium">Current</span>
+                            <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full font-medium">Current</span>
                         </div>
                         <div class="flex flex-wrap gap-2">
                             <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">Arduino</span>
                             <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">ESP32</span>
-                            <span
-                                class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">Microcontrollers</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">Microcontrollers</span>
                         </div>
                     </div>
 
@@ -714,14 +702,16 @@
                         and drive innovation in your industry.
                     </p>
                     <div class="space-x-4">
-                        <a href="#contact"
-                            class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">
-                            Get Started
-                        </a>
-                        <a href="#projects"
-                            class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-block">
-                            View My Work
-                        </a>
+                        <div class="flex flex-col sm:flex-row gap-4 w-full items-center justify-center">
+                            <a href="#contact"
+                                class="block w-full sm:w-44 text-center bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors mb-2 sm:mb-0">
+                                Get Started
+                            </a>
+                            <a href="#projects"
+                                class="block w-full sm:w-44 text-center border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                                View My Work
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

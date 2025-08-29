@@ -1,3 +1,53 @@
+@media (max-width: 1050px) and (min-width: 768px) {
+    /* Stack cover photo above hero text in the specified range */
+}
+@media (max-width: 1050px) and (min-width: 768px) {
+    /* Stack cover photo above hero text in the specified range */
+    #home .neural-hero {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+    #home .neural-hero > .mb-10 {
+        order: -1 !important;
+        margin-top: 0 !important;
+        margin-bottom: 1.5rem !important;
+    }
+    #home .neural-hero img {
+        width: 14rem !important;
+        height: 14rem !important;
+        min-width: 140px !important;
+        min-height: 140px !important;
+        max-width: 340px !important;
+        max-height: 340px !important;
+        object-fit: cover !important;
+        object-position: center !important;
+    }
+    #home .neural-hero > div:last-child {
+        margin-bottom: 0 !important;
+        margin-top: 1.5rem !important;
+    }
+    #home .neural-hero > div:last-child > div {
+        width: 14rem !important;
+        height: 14rem !important;
+        min-width: 140px !important;
+        min-height: 140px !important;
+        max-width: 340px !important;
+        max-height: 340px !important;
+    }
+}
+/* Simple About Me Card Style */
+.about-card-simple {
+    background: #fff8;
+    border-radius: 1.5rem;
+    border: 1.5px solid #dbeafe;
+    box-shadow: 0 4px 24px 0 rgba(59,130,246,0.07);
+    padding: 2.5rem 2rem;
+    transition: box-shadow 0.3s;
+}
+.about-card-simple:hover {
+    box-shadow: 0 8px 32px 0 rgba(59,130,246,0.13);
+}
 @media (max-width: 767px) {
     /* Education logo below text and centered on small screens */
     .education-logo-mobile {
@@ -50,6 +100,24 @@
 
 /* Responsive adjustments for mobile menu */
 @media (max-width: 480px) {
+    /* Reduce top margin above hero flex */
+    #home {
+        padding-top: 0 !important;
+    }
+    /* Add more space below the cover photo */
+    #home .neural-hero > .mb-10 {
+        margin-bottom: 2.5rem !important;
+    }
+    #home .neural-hero {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+    #home .neural-hero > .mb-10 {
+        order: -1 !important;
+        margin-top: 0 !important;
+        margin-bottom: 1.5rem !important;
+    }
     #mobile-menu-sidebar {
         width: 100vw !important;
         height: 100vh !important;
@@ -59,6 +127,33 @@
         right: 0 !important;
         border-radius: 0 !important;
         padding: 2rem 0 !important;
+    }
+    /* Responsive cover photo size and alignment */
+    #home .neural-hero {
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+    #home .neural-hero > div:last-child {
+        margin-bottom: 0 !important;
+        margin-top: 1.5rem !important;
+    }
+    #home .neural-hero img {
+        width: 12rem !important;
+        height: 12rem !important;
+        min-width: 120px !important;
+        min-height: 120px !important;
+        max-width: 320px !important;
+        max-height: 320px !important;
+        object-fit: cover !important;
+        object-position: center !important;
+    }
+    #home .neural-hero > div:last-child > div {
+        width: 12rem !important;
+        height: 12rem !important;
+        min-width: 120px !important;
+        min-height: 120px !important;
+        max-width: 320px !important;
+        max-height: 320px !important;
     }
 }
 
@@ -305,5 +400,14 @@ body {
     }
     .nav-btn.next {
         right: 5px;
+    }
+    /* Center the 'Passionate AI Engineer' text in hero section on small mobiles */
+    #home .neural-hero h1,
+    #home .neural-hero .text-4xl,
+    #home .neural-hero .text-5xl {
+        text-align: center !important;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }

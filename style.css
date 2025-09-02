@@ -57,7 +57,16 @@
         width: 8rem !important;
         height: 8rem !important;
         max-width: 180px !important;
+        font-size: 2rem !important;
+        line-height: 2.4rem !important;
         max-height: 180px !important;
+    #home .neural-hero p {
+        font-size: 1rem !important;
+        line-height: 1.5rem !important;
+    }
+    #home .neural-hero > .mb-10 {
+        margin-top: 2.5rem !important;
+    }
     }
 }
 @media (max-width: 767px) {
